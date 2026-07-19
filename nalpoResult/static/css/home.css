@@ -11,8 +11,9 @@ body {
   width: 100%;
   height: auto;
   max-height: 150px;
-  object-fit: cover;
+  object-fit: fit;
   display: block;
+  margin-bottom: 0;
 }
 
 .navbar-toggler {
@@ -71,7 +72,7 @@ body {
 }
 
 .footer h5 {
-  margin-bottom: 1rem;
+  margin-bottom: 1re m;
   font-weight: 600;
 }
 
@@ -176,14 +177,6 @@ body {
     font-size: 1.2rem;
   }
 }
-
-/* ===========================
-   Features Section
-=========================== */
-
-/* ===========================
-   Features Section
-=========================== */
 
 .feature-card {
   background: #fff;

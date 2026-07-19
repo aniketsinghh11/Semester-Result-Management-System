@@ -1,0 +1,284 @@
+/* ================= RESET ================= */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        font-family: "Segoe UI", sans-serif;
+        background: #edf2f7;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* ================= HEADER ================= */
+
+      .top-banner {
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+        z-index: 10;
+      }
+
+      .top-banner img {
+        width: 100%;
+        display: block;
+      }
+
+      /* ================= BACKGROUND ================= */
+
+      .background-shape {
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        background: linear-gradient(135deg, #0052d4, #4364f7, #6fb1fc);
+        border-radius: 50%;
+        top: -250px;
+        right: -250px;
+        opacity: 0.12;
+      }
+
+      .background-shape2 {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background: linear-gradient(135deg, #00c9ff, #92fe9d);
+        border-radius: 50%;
+        bottom: -180px;
+        left: -180px;
+        opacity: 0.1;
+      }
+
+      /* ================= MAIN ================= */
+
+      .main-wrapper {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 35px 20px;
+        position: relative;
+      }
+
+      /* ================= REGISTER CARD ================= */
+
+      .register-card {
+        width: 100%;
+        max-width: 780px;
+        background: #fff;
+        border-radius: 24px;
+        overflow: hidden;
+        display: flex;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 2;
+      }
+
+      /* ================= LEFT SIDE ================= */
+
+      .register-left {
+        width: 38%;
+        background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+        color: #fff;
+        padding: 35px 28px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .register-left::before,
+      .register-left::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .register-left::before {
+        width: 220px;
+        height: 220px;
+        top: -60px;
+        left: -60px;
+      }
+
+      .register-left::after {
+        width: 140px;
+        height: 140px;
+        bottom: -40px;
+        right: -40px;
+      }
+
+      .logo-circle {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .logo-circle i {
+        font-size: 36px;
+        color: #fff;
+      }
+
+      .register-left h1 {
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 14px;
+      }
+
+      .register-left p {
+        color: rgba(255, 255, 255, 0.82);
+        line-height: 1.6;
+        font-size: 13px;
+      }
+
+      /* ================= RIGHT SIDE ================= */
+
+      .register-right {
+        width: 62%;
+        padding: 32px;
+      }
+
+      .register-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 5px;
+      }
+
+      .register-subtitle {
+        color: #64748b;
+        margin-bottom: 24px;
+        font-size: 14px;
+      }
+
+      /* ================= INPUTS ================= */
+
+      .input-box {
+        position: relative;
+        margin-bottom: 16px;
+      }
+
+      .input-box i {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #2563eb;
+        font-size: 16px;
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      .form-control {
+        height: 48px;
+        border-radius: 14px;
+        border: 1px solid #dbe4f0;
+        padding-left: 46px;
+        background: #f8fbff;
+        font-size: 14px;
+      }
+
+      .form-select {
+        height: 48px;
+        border-radius: 14px;
+        border: 1px solid #dbe4f0;
+        background-color: #fff !important;
+        color: #000 !important;
+        padding-left: 16px;
+        font-size: 14px;
+      }
+
+      /* focus effect */
+      .form-control:focus,
+      .form-select:focus {
+        border-color: #2563eb;
+        background: #fff;
+        box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+        outline: none;
+      }
+
+      /* dropdown options fix */
+      .form-select option {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+
+      /* ================= BUTTON ================= */
+
+      .btn-register {
+        height: 48px;
+        border: none;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        transition: 0.3s ease;
+        box-shadow: 0 10px 20px rgba(37, 99, 235, 0.22);
+      }
+
+      .btn-register:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 24px rgba(37, 99, 235, 0.3);
+      }
+
+      /* ================= LOGIN LINK ================= */
+
+      .login-link {
+        margin-top: 18px;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .login-link a {
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      /* ================= FOOTER ================= */
+
+      .footer {
+        background: #0f172a;
+        color: #fff;
+        text-align: center;
+        padding: 14px;
+        font-size: 14px;
+      }
+
+      /* ================= MOBILE ================= */
+
+      @media (max-width: 900px) {
+        .register-card {
+          flex-direction: column;
+          max-width: 460px;
+        }
+
+        .register-left,
+        .register-right {
+          width: 100%;
+        }
+
+        .register-left {
+          text-align: center;
+          align-items: center;
+          padding: 30px 22px;
+        }
+
+        .register-right {
+          padding: 26px 20px;
+        }
+      }
