@@ -19,119 +19,17 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link href="{% static 'css/dashboard.css' %}" rel="stylesheet" />
-
-    <script>
-      let resultVisible = false;
-
-      function loadResult() {
-        const resultSection = document.getElementById("result-section");
-        const button = document.getElementById("toggleBtn");
-
-        /* HIDE RESULT */
-
-        if (resultVisible) {
-          resultSection.style.display = "none";
-
-          button.innerHTML = `
-                <i class="fa-solid fa-file-lines"></i>
-                Show Result
-            `;
-
-          resultVisible = false;
-
-          return;
-        }
-
-        /* SHOW RESULT */
-
-        fetch("/get-result/")
-          .then((response) => response.json())
-          .then((data) => {
-            resultSection.style.display = "block";
-
-            button.innerHTML = `
-                <i class="fa-solid fa-eye-slash"></i>
-                Hide Result
-            `;
-
-            let html = `
-                <div class="result-card">
-
-                    <div class="d-flex justify-content-between mb-4">
-
-                        <h3 style="color:#4a004a;">
-                            Welcome {{ student.stdname }}
-                        </h3>
-
-                        <a href="/logout/" class="btn btn-danger">
-                            Logout
-                        </a>
-
-                    </div>
-
-                    <table class="table table-bordered table-hover">
-
-                        <thead>
-                            <tr>
-                                <th>Subject</th>
-                                <th>Marks</th>
-                                <th>Status</th>
-                                <th>GPA</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-            `;
-
-            data.subjects.forEach((sub) => {
-              html += `
-                    <tr>
-                        <td>${sub.name}</td>
-                        <td>${sub.marks}</td>
-                        <td>${sub.status}</td>
-                        <td>${sub.gradepoint}</td>
-                    </tr>
-                `;
-            });
-
-            html += `
-                        </tbody>
-
-                    </table>
-
-                    <div class="summary">
-                        <p><strong>Total Marks:</strong> ${data.total_marks}</p>
-                        <p><strong>GPA:</strong> ${data.gpa}</p>
-                        <p><strong>Result:</strong> ${data.result}</p>
-                    </div>
-
-                    <a href="/download/" class="btn btn-success mt-4">
-                        <i class="fa fa-download"></i>
-                        Download Result
-                    </a>
-
-                </div>
-            `;
-
-            document.getElementById("result-content").innerHTML = html;
-
-            resultVisible = true;
-          });
-      }
-    </script>
   </head>
 
   <body>
     <!-- HEADER IMAGE -->
 
     <div class="top-banner">
-      <img src="{% static 'results/images/header.png' %}" alt="Header" />
-    </div>
-
-    <!-- TITLE -->
-
-    <div class="title-bar">
-      <h1>3<sup>rd</sup> SEMESTER RESULT</h1>
+      <img
+        src="{% static 'images/name.jpg' %}"
+        class="img-fluid w-100"
+        alt="Header"
+      />
     </div>
 
     <!-- SHOW RESULT BUTTON -->
@@ -149,42 +47,99 @@
 
     <!-- FOOTER -->
 
-    <footer>
-      <div class="row">
-        <div class="col-md-4">
-          <h4>Nalbari Polytechnic</h4>
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Nalbari Polytechnic</h5>
+            <p>Chandkuchi, Nalbari, Assam-781334</p>
+            <p>Contact: 03624295760</p>
+            <p>Email: nalbaripolytechnic@gmail.com</p>
 
-          <p>Chandkuchi, Nalbari, Assam-781334</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/share/1BPAkVThPp/"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/nalbari_polytechnic?igsh=MW83aXJoajlmMm1nbw=="
+                ><i class="bi bi-instagram"></i
+              ></a>
+            </div>
+          </div>
 
-          <p>Contact: 03624295760</p>
+          <div class="col-md-4">
+            <h5>Important Link</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="http://www.nalbaripolytechnic.in/mou.php" class="abc"
+                  >MOU</a
+                >
+              </li>
+              <li>
+                <a href="http://www.nalbaripolytechnic.in/nba.php" class="abc"
+                  >NBA</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://www.nalbaripolytechnic.in/allumni.php"
+                  class="abc"
+                  >ALLUMNI</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://www.nalbaripolytechnic.in/exam_cell.php"
+                  class="abc"
+                  >EXAM CELL</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://www.nalbaripolytechnic.in/document/360-feedback.pdf"
+                  class="abc"
+                  >AICTE's 360<sup>0</sup> FEEDBACK</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://www.nalbaripolytechnic.in/document/MANDATORY-DISCLOUSERS.pdf"
+                  class="abc"
+                  >MANDATORY DISCLOUSERS</a
+                >
+              </li>
+            </ul>
+          </div>
 
-          <p>Email: nalbaripolytechnic@gmail.com</p>
-
-          <div>
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-linkedin"></i>
+          <div class="col-md-4">
+            <h5>Useful Link</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.aicte-india.org/" class="abc">AICTE</a>
+              </li>
+              <li>
+                <a href="https://dte.assam.gov.in/" class="abc">DTE, Assam</a>
+              </li>
+              <li>
+                <a
+                  href="https://directorateofhighereducation.assam.gov.in/"
+                  class="abc"
+                  >DHE. Assam</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://scholarships.gov.in/fresh/studentRegistration.action"
+                  class="abc"
+                  >Scholarship</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
-
-        <div class="col-md-4">
-          <h4>Important Link</h4>
-
-          <p>MOU</p>
-          <p>NBA</p>
-          <p>ALUMNI</p>
-          <p>EXAM CELL</p>
-        </div>
-
-        <div class="col-md-4">
-          <h4>Useful Link</h4>
-
-          <p>AICTE</p>
-          <p>DTE Assam</p>
-          <p>DHE Assam</p>
-          <p>Scholarship</p>
-        </div>
       </div>
-    </footer>
+    </div>
+
+    <script src="{% static 'js/app.js' %}"></script>
   </body>
 </html>
