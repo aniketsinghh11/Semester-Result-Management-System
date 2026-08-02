@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register | Result System</title>
+    <title>Register | Result</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,10 +24,15 @@
 
   <body>
     <div class="top-banner">
-      <img src="{% static 'images/name.jpg' %}" alt="Header" />
+      <img
+        src="{% static 'images/name.jpg' %}"
+        class="img-fluid w-100"
+        alt="Header"
+      />
     </div>
+
     <nav class="navbar navbar-expand-lg custom-navbar">
-      <div class="container">
+      <div class="container-fluid">
         <button
           class="navbar-toggler me-auto"
           type="button"
@@ -43,55 +48,395 @@
         <div class="collapse navbar-collapse" id="navbarMenu">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">HOME</a>
+              <a class="nav-link" href="http://www.nalbaripolytechnic.in/"
+                >HOME</a
+              >
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">ABOUT</a>
+              <a
+                class="nav-link"
+                href="http://www.nalbaripolytechnic.in/about.php"
+                >ABOUT</a
+              >
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href=""
+                id="deptDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                DEPARTMENTS
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/computer.php"
+                    >Computer Science & Engineering</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/electrical.php"
+                    >Electrical Engineering</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/printing.php"
+                    >Printing Technology</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/science.php"
+                    >Basic Science</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/humanities.php"
+                    >Humanities</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/workshop.php"
+                    >Basic Workshop</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href=""
+                id="deptDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                ADMINISTRATION
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/general_office.php"
+                    >General Office</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/attandant.php"
+                    >Attandant Staff</a
+                  >
+                </li>
+              </ul>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">DEPARTMENTS</a>
+              <a
+                class="nav-link"
+                href="http://www.nalbaripolytechnic.in/faculties.php"
+                >FACULTIES</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href=""
+                id="deptDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                STUDENTS' ZONE
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/1stsem.php"
+                    >1st Semester</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/2ndsem.php"
+                    >2nd Semester</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/3rdsem.php"
+                    >3rd Semester</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/4thsem.php"
+                    >4th Semester</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/5thsem.php"
+                    >5th Semester</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/6thsem.php"
+                    >6th Semester</a
+                  >
+                </li>
+              </ul>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#">ADMINISTRATION</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">FACULTIES</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">STUDENTS' ZONE</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">ACADEMICS</a>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href=""
+                id="deptDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                ACADEMICS
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/general_office.php"
+                    >Academic Calender</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/attandant.php"
+                    >Student List</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/general_office.php"
+                    >Admission</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/attandant.php"
+                    >Time Table</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/general_office.php"
+                    >Institute Magazine</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/attandant.php"
+                    >Holiday 2026</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/attandant.php"
+                    >Grievance Redressal</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/attandant.php"
+                    >Regulation</a
+                  >
+                </li>
+              </ul>
             </li>
 
             <li class="nav-item">
               <a class="nav-link active" href="{% url 'home' %}">RESULT</a>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#">FACILITIES</a>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href=""
+                id="deptDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                FACILITIES
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/general_office.php"
+                    >Library</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/attandant.php"
+                    >Canteen</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href=""
+                id="deptDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                COMMITTEE
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/general_office.php"
+                    >Academic Council</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/attandant.php"
+                    >Anti Ragging Committee</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/general_office.php"
+                    >Anti Ragging Squad</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/attandant.php"
+                    >Grievance Redressale Committee</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/general_office.php"
+                    >Internal Complaint Committee</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/attandant.php"
+                    >Library Automation</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/general_office.php"
+                    >Purchase Committee</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/attandant.php"
+                    >Quality Assurance Cell</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/general_office.php"
+                    >RTI ACT 2026</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/attandant.php"
+                    >SC/ST Harassment Complaint</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://www.nalbaripolytechnic.in/general_office.php"
+                    >Innovation Council</a
+                  >
+                </li>
+              </ul>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">COMMITTEE</a>
+              <a
+                class="nav-link"
+                href="http://www.nalbaripolytechnic.in/tpo.php"
+                >T&P Cell</a
+              >
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">GALLERY</a>
+              <a
+                class="nav-link"
+                href="http://www.nalbaripolytechnic.in/gallery.php"
+                >GALLERY</a
+              >
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">SB COLLECT</a>
+              <a
+                class="nav-link"
+                href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm"
+                >SB COLLECT</a
+              >
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">CONTACT</a>
+              <a
+                class="nav-link"
+                href="http://www.nalbaripolytechnic.in/contact.php"
+                >CONTACT</a
+              >
             </li>
           </ul>
         </div>
@@ -231,6 +576,7 @@
         </div>
       </div>
     </div>
+
     <div class="footer">
       <div class="container">
         <div class="row">
@@ -241,33 +587,89 @@
             <p>Email: nalbaripolytechnic@gmail.com</p>
 
             <div class="social-icons">
-              <i class="bi bi-facebook"></i>
-              <i class="bi bi-instagram"></i>
-              <i class="bi bi-linkedin"></i>
+              <a href="https://www.facebook.com/share/1BPAkVThPp/"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/nalbari_polytechnic?igsh=MW83aXJoajlmMm1nbw=="
+                ><i class="bi bi-instagram"></i
+              ></a>
             </div>
           </div>
 
           <div class="col-md-4">
             <h5>Important Link</h5>
             <ul class="list-unstyled">
-              <li>MOU</li>
-              <li>NBA</li>
-              <li>ALUMNI</li>
-              <li>EXAM CELL</li>
+              <li>
+                <a href="http://www.nalbaripolytechnic.in/mou.php" class="abc"
+                  >MOU</a
+                >
+              </li>
+              <li>
+                <a href="http://www.nalbaripolytechnic.in/nba.php" class="abc"
+                  >NBA</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://www.nalbaripolytechnic.in/allumni.php"
+                  class="abc"
+                  >ALLUMNI</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://www.nalbaripolytechnic.in/exam_cell.php"
+                  class="abc"
+                  >EXAM CELL</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://www.nalbaripolytechnic.in/document/360-feedback.pdf"
+                  class="abc"
+                  >AICTE's 360<sup>0</sup> FEEDBACK</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://www.nalbaripolytechnic.in/document/MANDATORY-DISCLOUSERS.pdf"
+                  class="abc"
+                  >MANDATORY DISCLOUSERS</a
+                >
+              </li>
             </ul>
           </div>
 
           <div class="col-md-4">
             <h5>Useful Link</h5>
             <ul class="list-unstyled">
-              <li>AICTE</li>
-              <li>DTE Assam</li>
-              <li>DHE Assam</li>
-              <li>Scholarship</li>
+              <li>
+                <a href="https://www.aicte-india.org/" class="abc">AICTE</a>
+              </li>
+              <li>
+                <a href="https://dte.assam.gov.in/" class="abc">DTE, Assam</a>
+              </li>
+              <li>
+                <a
+                  href="https://directorateofhighereducation.assam.gov.in/"
+                  class="abc"
+                  >DHE. Assam</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://scholarships.gov.in/fresh/studentRegistration.action"
+                  class="abc"
+                  >Scholarship</a
+                >
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
